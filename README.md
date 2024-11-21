@@ -19,7 +19,7 @@
   
 ---
  
-# The `gigs` package, version: `0.1.7`;
+# The `gigs` package, version: `0.1.8`;
   
 ---
  
