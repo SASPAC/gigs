@@ -92,6 +92,7 @@ Macro approach:
 ,dataOut=RESULT1
 ,weight_kg=wt_kg
 ,outcomes=wfa
+,by=id
 )
 
 proc print data=RESULT1(obs=6) label;
@@ -116,7 +117,8 @@ data RESULT2;
     wt_kg,
     age_days,
     gest_days,
-    sex
+    sex,
+    0
   );
 run;
 

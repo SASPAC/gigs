@@ -1,22 +1,25 @@
 ﻿![gigs](./logoSAS.png)
----
 
-*Assess Fetal, Newborn, and Child Growth with International Standards* 
-
+----------------------------------------------------------------
+ 
+ *Assess Fetal, Newborn, and Child Growth with International Standards* 
+  
+----------------------------------------------------------------
+ 
 ### Version information:
-
+  
 - Package: gigs
-- Version: 0.0.7
-- Generated: 2024-05-16T17:17:08
-- Author(s): Bartosz Jablonski (yabwon@gmail.com), Simon Parker (simon.parker@lshtm.ac.uk), Linda Vesel, Eric Ohuma (eric.ohuma@lshtm.ac.uk)
+- Version: 0.1.7
+- Generated: 2024-11-21T13:19:53
+- Author(s): Bartosz Jablonski (yabwon@gmail.com), Simon Parker (simon.parker.24@ucl.ac.uk), Linda Vesel, Eric Ohuma (eric.ohuma@lshtm.ac.uk)
 - Maintainer(s): Bartosz Jablonski (yabwon@gmail.com)
 - License: GNU General Public License v3.0
-- File SHA256: `F*9B3B83F9CE523633159727EED8688851AC1DBDC0B7EE492DF90BFD6448933D4C` for this version
-- Content SHA256: `C*A3084D73E2B717E303A1F97AEE11E8D43E5C07738C2B0EB3C59BB741DB84B6FF` for this version
+- File SHA256: `F*1C01A3BFB6489127229300DA412477DF59EF0DF0C379E73C6DB301BBCB3672E5` for this version
+- Content SHA256: `C*9BA2700A1C25512386CA1026ACA128222FAC30A92ECCF5C004CA8561683E0AC8` for this version
   
 ---
  
-# `gigs` version: `0.0.7`;
+# The `gigs` package, version: `0.1.7`;
   
 ---
  
@@ -25,26 +28,25 @@
 
 ## Overview
 
-Produced as part of the Guidance for International Growth Standards (GIGS)
-project at the London School of Hygiene & Tropical Medicine,
-`gigs` provides a single, simple interface for working with
-the WHO Child Growth standards and outputs from the
-INTERGROWTH-21<sup>st</sup> project. You will find functions for
-converting from anthropometric measures (e.g. weight or length) to
-z-scores and centiles, and the inverse. Also included are functions for
-classifying newborn and infant growth according to literature-based
-cut-offs.
+Produced as part of the Guidance for International Growth Standards
+project at the London School of Hygiene & Tropical Medicine, **gigs**
+provides a single, simple interface for working with the WHO Child
+Growth standards and outputs from the INTERGROWTH-21<sup>st</sup>
+project. You will find functions for converting from anthropometric
+measures (e.g. weight or length) to z-scores and centiles, and the
+inverse. Also included are functions for classifying newborn and infant
+growth according to literature-based cut-offs.
 
-`gigs` is of use to anyone interested in fetal and child growth, including
-child health researchers, policymakers, and clinicians. This package is best
-suited to growth data where the gestational age (GA) of each child is known, as
-the use of the growth standards included in `gigs` is GA-dependent.
-We recommend you check out the
-[available standards](#available-international-growth-standards) section to
-see if your anthropometric measurements can be converted to z-scores/centiles by
-`gigs`. We recommend using `gigs` to generate continuous or categorical
-measures of fetal/newborn/child growth, which can then be used in downstream
-analyses.
+**gigs** is of use to anyone interested in fetal and child growth,
+including child health researchers, policymakers, and clinicians. This
+package is best suited to growth data where the gestational age (GA) of
+each child is known, as the use of the growth standards included in
+**gigs** is GA-dependent. We recommend you check out the [available
+standards](#available-international-growth-standards) section to see if
+your anthropometric measurements can be converted to z-scores/centiles
+by **gigs**. We recommend using **gigs** to generate continuous or
+categorical measures of fetal/newborn/child growth, which can then be
+used in downstream analyses.
 
 ## Installation
 
@@ -132,28 +134,51 @@ Location of the [**SAS Packages Repository**](https://github.com/SASPAC)
 
 ### [Introductory Examples](./examples/gigs_examples.md)
 
-## Terminology
+## Rationale + terminology
 
-`gigs` operates with anthropometric measurements, and can convert between these and
-*z-scores*/*centiles*. Z-scores and centiles represent the location of a
-measurement within a normal distribution of values, such that:
+When working with growth measurements from individual children, it is
+helpful to compare those measurements to a growth standard, which
+represents average growth for an population of children. This allows
+assessment of individual growth - for example, that a baby was born
+small, but later caught up to its peers in size. It also allows you to
+compare measurements from different children.
 
-* A *z-score* is the number of standard deviations from the mean for a given
-  anthropometric measurement (e.g. height or weight).
-* A *centile* represents the proportion of measurements in some distribution
-  which we would expect to be lower than a measurement we've taken. In `gigs`,
-  these are represented as a value between `0` and `1`. For example, `0.5`
-  corresponds to the 50<sup>th</sup> centile (i.e. the mean), whereas `0.75`
-  corresponds to the 75<sup>th</sup> centile.
+These standards of growth can be made in different ways, but the best
+studies utilise international samples made of up thousands of healthy
+fetuses, newborns, or children. In **gigs**, you’ll find different
+international growth standards, allowing you to compare growth measures
+from children with different ages, weights, heights, and more.
 
-In growth data, z-scores and centiles represent the size a fetus, newborn, or
-child relative to its peers. Its size is considered relative to some
-standardising variable, which is usually age but could also be another variable
-such as their length. By tracking a child's relative size as they
-grow, you can see if they are achieving their growth potential or not. If not,
-this may indicate underlying issues such as ill health or undernutrition.
+In general, you’ll use **gigs** to transform raw growth measures to
+*z-scores* or *centiles*. Z-scores and centiles represent the location
+of a measurement within a normal distribution of values, such that:
+
+- A *z-score* is the number of standard deviations from the mean for a
+  given anthropometric measurement (e.g. height or weight).
+- A *centile* represents the proportion of measurements in some
+  distribution which we would expect to be lower than a measurement
+  we’ve taken. In *gigs*, these are represented as a value between `0`
+  and `1`. For example, `0.5` corresponds to the 50<sup>th</sup> centile
+  (i.e. the mean), whereas `0.75` corresponds to the 75<sup>th</sup>
+  centile.
+
+In growth data, z-scores and centiles represent the size a fetus,
+newborn, or child relative to its peers. Size here is considered
+relative to a standardising variable, which is usually age but could
+also be another variable such as their length. By tracking a child’s
+relative size as they grow, you can see if they are achieving their
+growth potential or not. If not, this may indicate underlying issues
+such as ill health or undernutrition.
+
+## Classification functions
+
+**gigs** includes a number of functions which permit fast identification
+of at-risk infants through classification of suboptimal growth. The
+cut-offs used are sourced from research literature; you can check the
+function documentation to see these sources.
 
 ### Available international growth standards
+
 `gigs` facilitates the proper use of international growth standards, which
 are growth charts developed using international samples of healthy singleton
 children born to mothers that had their health needs met during pregnancy.
@@ -257,7 +282,7 @@ Required SAS Packages:
  
 --------------------------------------------------------------------
  
-*SAS package generated by SAS Package Framework, version `20240423`*
+*SAS package generated by SAS Package Framework, version `20241102`*
  
 --------------------------------------------------------------------
 
