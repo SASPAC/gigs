@@ -9,13 +9,13 @@
 ### Version information:
   
 - Package: gigs
-- Version: 0.1.7
-- Generated: 2024-11-21T13:19:53
+- Version: 0.1.8
+- Generated: 2024-11-21T17:32:25
 - Author(s): Bartosz Jablonski (yabwon@gmail.com), Simon Parker (simon.parker.24@ucl.ac.uk), Linda Vesel, Eric Ohuma (eric.ohuma@lshtm.ac.uk)
 - Maintainer(s): Bartosz Jablonski (yabwon@gmail.com)
 - License: GNU General Public License v3.0
-- File SHA256: `F*1C01A3BFB6489127229300DA412477DF59EF0DF0C379E73C6DB301BBCB3672E5` for this version
-- Content SHA256: `C*9BA2700A1C25512386CA1026ACA128222FAC30A92ECCF5C004CA8561683E0AC8` for this version
+- File SHA256: `F*153695E7C4F007D2BFF34ACF7F666D95150F52E27ADA710EFEC8CD8FE2F804D0` for this version
+- Content SHA256: `C*C6B2B9B3B715F6D4CF01316EFF20F327394FC8F8D3B1CE47DFCB99BA3F6F778E` for this version
   
 ---
  
